@@ -16,6 +16,12 @@ body {
     font-family: 'ChampagneLimousine', sans-serif;
 }
 
+.contador {
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
 .cuadro-confirmar {
     background-color: #999999;
     font-size: 1.2em;
@@ -72,6 +78,10 @@ body {
 .titulo3 {
     color: #3f3f3f;
     font-size: 3em;
+}
+
+#contadores {
+    margin-top: -10%;
 }
 
 #nombre {

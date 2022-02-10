@@ -84,6 +84,7 @@
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\bootstrap.bundle.min.js.map" />
     <Content Include="js\jquery-3.6.0.min.js" />
+    <Content Include="js\regina.js" />
     <Content Include="lib\CHANGELOG.md" />
     <Content Include="lib\code.css" />
     <Content Include="lib\COPYING" />
