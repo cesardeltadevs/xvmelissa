@@ -1,0 +1,112 @@
+﻿/*@import url('../fonts/Honey_Florist.otf');
+@import url('../fonts/Champagne_Limousines.ttf');*/
+
+@font-face {
+    font-family: 'HoneyFlorist';
+    src: url("../fonts/Honey Florist.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'ChampagneLimousine';
+    src: url("../fonts/Champagne Limousines.ttf") format('truetype');
+}
+
+
+body {
+    font-family: 'ChampagneLimousine', sans-serif;
+}
+
+.cuadro-confirmar {
+    background-color: #999999;
+    font-size: 1.2em;
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+    text-transform: uppercase;
+}
+
+.direccion {
+    font-size: 1.5em;
+}
+
+.direccion span {
+    font-size: 1.4em;
+}
+
+.fecha {
+    color: #3f3f3f;
+    font-size: 3em;
+}
+
+.hashtag-titulo {
+    font-size: 4em;
+    font-weight: bolder;
+}
+
+.misa {
+    font-size: 3em;
+}
+
+.nombres2 {
+    color: #3f3f3f;
+    font-size: 2.5em;
+}
+
+.sobresaliente {
+    font-family: 'HoneyFlorist';
+    
+}
+
+.texto1 {
+    font-family: 'HoneyFlorist';
+}
+
+.titulo {
+    font-size: 7em;
+}
+
+.titulo2 {
+    color: white;
+    font-size: 5em;
+}
+
+.titulo3 {
+    color: #3f3f3f;
+    font-size: 3em;
+}
+
+#nombre {
+    color: white;
+    font-size: 9em;
+    margin-left: 5%;
+    margin-top: 50%;
+    position: absolute;
+}
+
+#seccion1 {
+    background-image: url('../img/fondo1.jpg');
+}
+
+#seccion2 {
+    background-image: url('../img/fondo2.jpg');
+}
+
+#seccion3 {
+    background-image: url('../img/fondo3.jpg');
+}
+
+#seccion4 {
+    background-image: url('../img/fondo4.png');
+}
+
+#seccion6 {
+    background-image: url('../img/fondo6.png');
+}
+
+#seccion7 {
+    background-image: url('../img/fondo7.png');
+}
+
+#seccion8 {
+    background-image: url('../img/fondo8.png');
+}
+
