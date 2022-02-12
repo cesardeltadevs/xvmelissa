@@ -26,7 +26,7 @@ select apellidos as 'familia', tipo from familias where md5(id_familia) = md5('1
 
 #Obtiene las invitaciones por familia
 select id_persona as 'invitado', nombre, confirmacion from personas p 
-inner join familias f on p.familia = f.id_familia where md5(id_familia) = md5('1')
+inner join familias f on p.familia = f.id_familia where md5(id_familia) = md5('29')
 order by nombre;
 
 

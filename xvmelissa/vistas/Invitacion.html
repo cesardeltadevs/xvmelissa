@@ -194,7 +194,15 @@
                                 <div class="row">
                                     <div class="col-4"></div>
                                     <div class="col-4">
-                                        <button id="i{{@invitado.invitado}}" class="btn btn-light" {{@confirmacion == "1" ? 'disabled="disabled"' : ''}}>Confirmar</button>
+                                        <check if="{{@invitado.confirmacion == '1'}}">
+                                            <true>
+                                                <button id="i{{@invitado.invitado}}" class="btn btn-light" disabled>Confirmado</button>
+                                            </true>
+                                            <false>
+                                                <button id="i{{@invitado.invitado}}" class="btn btn-light">Confirmar</button>
+                                                <!--<button id="i{{@invitado.invitado}}" class="btn btn-light" {{@confirmacion == "1" ? 'disabled="disabled"' : ''}}>Confirmar</button>-->
+                                            </false>
+                                        </check>
                                     </div>
                                     <div class="col-4"></div>
                                 </div>

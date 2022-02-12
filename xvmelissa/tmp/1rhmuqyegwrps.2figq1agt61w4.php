@@ -194,7 +194,15 @@
                                 <div class="row">
                                     <div class="col-4"></div>
                                     <div class="col-4">
-                                        <button id="i<?= ($invitado['invitado']) ?>" class="btn btn-light" <?= ($confirmacion == "1" ? 'disabled="disabled"' : '') ?>>Confirmar</button>
+                                        <?php if ($invitado['confirmacion'] == '1'): ?>
+                                            
+                                                <button id="i<?= ($invitado['invitado']) ?>" class="btn btn-light" disabled>Confirmado</button>
+                                            
+                                            <?php else: ?>
+                                                <button id="i<?= ($invitado['invitado']) ?>" class="btn btn-light">Confirmar</button>
+                                                <!--<button id="i<?= ($invitado['invitado']) ?>" class="btn btn-light" <?= ($confirmacion == "1" ? 'disabled="disabled"' : '') ?>>Confirmar</button>-->
+                                            
+                                        <?php endif; ?>
                                     </div>
                                     <div class="col-4"></div>
                                 </div>

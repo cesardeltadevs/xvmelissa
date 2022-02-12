@@ -47,25 +47,27 @@ namespace datos
 		public function Confirmar($f3) {
 			$invitado = $f3->get('PARAMS.inv');
 
+			$respuesta = array();
+
 			if (empty($invitado)) {
-				return false;
+				$respuesta['confirma'] = 'false';
 			}
 			else {
 				$invitadoOk = str_replace("i", "", $invitado);
 
 				$baseObj = $this->conectar();
 				$confirma = $baseObj->exec("update personas set confirmacion = 1 where id_persona = ?;", $invitadoOk);
-				var_dump($confirma);
-				exit;
 				unset($baseObj);
 
 				if ($confirma == 1) {
-					return true;
+					$respuesta['confirma'] = 'true';
 				}
 				else {
-					return false;
+					$respuesta['confirma'] = 'false';
 				}
 			}
+
+			exit(json_encode($respuesta));
 		}
 	}
 }

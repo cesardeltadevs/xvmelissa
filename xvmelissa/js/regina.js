@@ -38,6 +38,8 @@ function actualizarContador() {
     //SPAN_SECONDS.textContent = REMAINING_SECONDS;
 }
 
+/*FUNCIONES PROPIAS #################################################################################################################################*/
+
 var direccion = function () {
     //Obtiene el nombre del Servidor
     if (window.location.hostname == 'localhost') {
@@ -50,13 +52,17 @@ var direccion = function () {
 
 async function ConfirmarInvitado(inv) {
     console.log(inv);
-    await fetch(direccion() + 'confirmar/' + inv, {method: 'POST'})
+    await fetch(direccion() + 'confirmar/' + inv, { method: 'POST' })
         .then((resultado) => resultado.json()
         ).then((respuesta) => {
-            console.log(respuesta);
-            //let conteo = document.querySelector("#conteo");
-            //conteo.innerHTML = datos.length + " Resultado(s) encontrado(s)";
-            //PegarDirectorio(datos);
+            if (respuesta.confirma === 'true') {
+                alert("Invitado Confirmado :D");
+                document.querySelector('#' + inv).setAttribute("disabled", "disabled");
+                document.querySelector('#' + inv).innerHTML = "Confirmado";
+            }
+            else {
+                alert("Error al confirmar Invitado ¬¬");
+            }
         });
 }
 
