@@ -17,6 +17,8 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="datos\Conexion.php" />
+    <Compile Include="datos\Confirmaciones.php" />
     <Compile Include="index.php" />
     <Compile Include="lib\audit.php" />
     <Compile Include="lib\auth.php" />
@@ -103,6 +105,7 @@
     <Folder Include="js\" />
     <Folder Include="img\" />
     <Folder Include="fonts\" />
+    <Folder Include="datos\" />
     <Folder Include="vistas\" />
   </ItemGroup>
 </Project>

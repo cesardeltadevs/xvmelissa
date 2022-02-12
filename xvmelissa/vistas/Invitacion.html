@@ -166,32 +166,34 @@
             </div>
         </div>
 
-        <div id="seccion6">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="text-center titulo3">Lista de Asistencia</h3>
-                    <img src="{{@ruta}}img/greca.png" alt="Greca" class="img-fluid w-100" />
-                    <p>&nbsp;</p>
-                    <h4 class="text-center direccion">FAMILIA: <br /> <strong>NOMBRE DE LA FAMILIA</strong></h4>
+        <check if="{{@familia}}">
+            <div id="seccion6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-center titulo3">Lista de Asistencia</h3>
+                        <img src="{{@ruta}}img/greca.png" alt="Greca" class="img-fluid w-100" />
+                        <p>&nbsp;</p>
+                        <h4 class="text-center direccion">FAMILIA: <br /> <strong>NOMBRE DE LA FAMILIA</strong></h4>
+                    </div>
                 </div>
-            </div>
-            <br />
+                <br />
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="rounded d-block w-75 cuadro-confirmar mx-auto">
-                        <p class="text-center">XXXXX XXXXXX XXXXXXXXXX</p>
-                        <div class="row">
-                            <div class="col-4"></div>
-                            <div class="col-4">
-                                <a href="#" class="btn btn-light">Confirmar</a>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="rounded d-block w-75 cuadro-confirmar mx-auto">
+                            <p class="text-center">XXXXX XXXXXX XXXXXXXXXX</p>
+                            <div class="row">
+                                <div class="col-4"></div>
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-light">Confirmar</a>
+                                </div>
+                                <div class="col-4"></div>
                             </div>
-                            <div class="col-4"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </check>         
 
         <div id="seccion7">
             <p>&nbsp;</p>
@@ -214,7 +216,7 @@
     <script src="{{@ruta}}js/regina.js" type="text/javascript"></script>
     <script type="text/javascript">
         actualizarContador();
-        setInterval(updateCountdown, MILLISECONDS_OF_A_MINUTE);
+        setInterval(actualizarContador, MILLISECONDS_OF_A_MINUTE);
     </script>
 </body>
 </html>
