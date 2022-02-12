@@ -38,3 +38,34 @@ function actualizarContador() {
     //SPAN_SECONDS.textContent = REMAINING_SECONDS;
 }
 
+var direccion = function () {
+    //Obtiene el nombre del Servidor
+    if (window.location.hostname == 'localhost') {
+        return 'http://' + window.location.hostname + ':17944/';
+    }
+    else {
+        return 'http://cezaryto.com/apps/regina/';
+    }
+};
+
+async function ConfirmarInvitado(inv) {
+    console.log(inv);
+    await fetch(direccion() + 'confirmar/' + inv, {method: 'POST'})
+        .then((resultado) => resultado.json()
+        ).then((respuesta) => {
+            console.log(respuesta);
+            //let conteo = document.querySelector("#conteo");
+            //conteo.innerHTML = datos.length + " Resultado(s) encontrado(s)";
+            //PegarDirectorio(datos);
+        });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    actualizarContador();
+    setInterval(actualizarContador, MILLISECONDS_OF_A_MINUTE);
+
+    let botones = document.querySelectorAll("button");
+    botones.forEach(boton => boton.addEventListener("click", function () {
+        ConfirmarInvitado(this.id);
+    }));
+});

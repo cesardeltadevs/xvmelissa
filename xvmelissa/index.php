@@ -18,10 +18,11 @@ else {
 }
 
 $f3->route('GET /', function ($f3) {
-	$f3->set('invitacion', false);
+	$f3->set('codigo', false);
 	echo \Template::instance()->render('Invitacion.html');
 });
 
-$f3->route('GET /@familia', 'datos\Confirmaciones->Invitacion');
+$f3->route('GET /@codigo', 'datos\Confirmaciones->Invitacion');
+$f3->route('POST /confirmar/@inv', 'datos\Confirmaciones->Confirmar');
 
 $f3->run();

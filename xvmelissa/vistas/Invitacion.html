@@ -166,32 +166,43 @@
             </div>
         </div>
 
-        <check if="{{@familia}}">
+        <check if="{{@codigo}}">
             <div id="seccion6">
                 <div class="row">
                     <div class="col-md-12">
                         <h3 class="text-center titulo3">Lista de Asistencia</h3>
                         <img src="{{@ruta}}img/greca.png" alt="Greca" class="img-fluid w-100" />
                         <p>&nbsp;</p>
-                        <h4 class="text-center direccion">FAMILIA: <br /> <strong>NOMBRE DE LA FAMILIA</strong></h4>
+                        <check if="{{@familia.tipo == '1'}}">
+                            <true>
+                                <h4 class="text-center direccion">FAMILIA: <br /> <strong>{{@familia.familia}}</strong></h4>                                
+                            </true>
+                            <false>
+                                <h4 class="text-center direccion">INVITADO ESPECIAL: <br /> <strong>{{@familia.familia}}</strong></h4>
+                            </false>
+                        </check>
                     </div>
                 </div>
                 <br />
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="rounded d-block w-75 cuadro-confirmar mx-auto">
-                            <p class="text-center">XXXXX XXXXXX XXXXXXXXXX</p>
-                            <div class="row">
-                                <div class="col-4"></div>
-                                <div class="col-4">
-                                    <a href="#" class="btn btn-light">Confirmar</a>
+                <repeat group="{{@invitados}}" value="{{@invitado}}">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="rounded d-block w-75 cuadro-confirmar mx-auto">
+                                <input type="hidden" value="{{@invitado.invitado}}" />
+                                <p class="text-center">{{@invitado.nombre}}</p>
+                                <div class="row">
+                                    <div class="col-4"></div>
+                                    <div class="col-4">
+                                        <button id="i{{@invitado.invitado}}" class="btn btn-light" {{@confirmacion == "1" ? 'disabled="disabled"' : ''}}>Confirmar</button>
+                                    </div>
+                                    <div class="col-4"></div>
                                 </div>
-                                <div class="col-4"></div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <br />
+                </repeat>                
             </div>
         </check>         
 
@@ -213,10 +224,6 @@
         </div>
     </div>
 
-    <script src="{{@ruta}}js/regina.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        actualizarContador();
-        setInterval(actualizarContador, MILLISECONDS_OF_A_MINUTE);
-    </script>
+    <script src="{{@ruta}}js/regina.js" type="text/javascript"></script>    
 </body>
 </html>
