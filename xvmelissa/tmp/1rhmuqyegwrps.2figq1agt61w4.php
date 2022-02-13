@@ -78,7 +78,7 @@
                 <div class="col-md-12">
                     <h2 class="text-center titulo2 texto1">Mi madrina</h2>
                     <p class="text-center nombres2 texto1">Yobana Rocha Vázquez</p>
-                    <p><img src="<?= ($ruta) ?>img/greca.png" alt="Greca" class="img-fluid w-100" /><br /></p>
+                    <p>&nbsp;</p>
                 </div>
             </div>
             <br />
@@ -215,18 +215,62 @@
         <?php endif; ?>         
 
         <div id="seccion7">
-            <p>&nbsp;</p>
+            <br />
+            <br />
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="hashtag-titulo text-center">Hashtag del Evento</h2>
                 </div>
             </div>
+            <p>&nbsp;</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center texto-hashtag">Ayúdame a crear mis recuerdos.<br />
+                        Publica todas las fotos del evento <br />
+                        en tus redes sociales con el hashtag...</p>
+                </div>
+            </div>
+            <p>&nbsp;</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center hashtag-rosa">#ReginaFunnyFest</h1>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 text-center">
+                            <a class="link-ig" href="instagram://user?username=_regina.ro_" target="_blank"><img src="<?= ($ruta) ?>img/instagram.png" /> @_regina.ro_</a>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                </div>
+            </div>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>                        
+            <p>&nbsp;</p>                        
+            <p>&nbsp;</p>                        
         </div>
 
         <div id="seccion8">
             <div class="row">
                 <div class="col-md-12">
+                    <h1 class="text-center titulo-plan">Plan del evento</h1>
+                    <p>&nbsp;</p>
+                    <ul class="lista-plan">
+                        <li>6:15pm - Misa de Acción de Gracias</li>
+                        <li>8:00pm - Recepción en el salón</li>
+                        <li>8:30pm - Mi vals</li>
+                        <li>9:30 - Cena</li>
+                    </ul>
+                    <p>&nbsp;</p>
+                    <h3 class="text-center sobresaliente nombres2">Mesa de Regalos</h3>
+                    <p class="text-center texto-hashtag">El mejor regalo es que me acompañes, <br /> pero si deseas obsequiarme algo, <br /> te comparto algunas sugerencias</p>
 
+                    <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/50802664" target="_blank">
+                        <img src="<?= ($ruta) ?>img/liverpool.png" class="d-block mx-auto w-50" alt="Mesa Liverpool" />
+                    </a>
+                    <br />
+                    <img src="<?= ($ruta) ?>img/sears.png" class="d-block mx-auto w-50" alt="Mesa Sears" />
                 </div>
             </div>
         </div>

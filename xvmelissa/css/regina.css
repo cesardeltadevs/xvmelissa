@@ -48,6 +48,33 @@ body {
     font-weight: bolder;
 }
 
+.hashtag-rosa {
+    color: #ED79A0;
+    font-size: 3em;
+    font-weight:bolder;
+}
+
+.hashtag-rosa a {
+    text-decoration: none;
+}
+
+.link-ig {
+    color: #3f3f3f;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-ig img {
+    width: 1.5em;
+}
+
+.lista-plan {
+    font-size: 1.25em;
+    list-style: none;
+    margin-left: 5%;
+}
+
 .misa {
     font-size: 3em;
 }
@@ -58,12 +85,17 @@ body {
 }
 
 .sobresaliente {
-    font-family: 'HoneyFlorist';
-    
+    font-family: 'HoneyFlorist';    
 }
 
 .texto1 {
     font-family: 'HoneyFlorist';
+}
+
+.texto-hashtag {
+    color: #3f3f3f;
+    font-size: 1.25em;
+    font-weight: bold;
 }
 
 .titulo {
@@ -78,6 +110,11 @@ body {
 .titulo3 {
     color: #3f3f3f;
     font-size: 3em;
+}
+
+.titulo-plan {
+    font-family: 'HoneyFlorist';
+    font-size: 4em;
 }
 
 #contadores {
@@ -113,10 +150,12 @@ body {
 }
 
 #seccion7 {
-    background-image: url('../img/fondo7.png');
+    background: url('../img/fondo7.png') no-repeat top center;
+    background-size: cover;
 }
 
 #seccion8 {
-    background-image: url('../img/fondo8.png');
+    background: url('../img/fondo8.png') no-repeat top center;
+    background-size: cover;
 }
 

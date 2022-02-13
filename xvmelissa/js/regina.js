@@ -57,8 +57,9 @@ async function ConfirmarInvitado(inv) {
         ).then((respuesta) => {
             if (respuesta.confirma === 'true') {
                 alert("Invitado Confirmado :D");
-                document.querySelector('#' + inv).setAttribute("disabled", "disabled");
-                document.querySelector('#' + inv).innerHTML = "Confirmado";
+                let boton = document.querySelector('#' + inv);
+                boton.setAttribute("disabled", "disabled");
+                boton.innerHTML = "Confirmado";
             }
             else {
                 alert("Error al confirmar Invitado ¬¬");

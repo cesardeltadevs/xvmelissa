@@ -18,7 +18,14 @@ create table personas (
 update personas set confirmacion = 1 where id_persona = '115';
 
 #Links de Invitacion
-select concat('http://cezaryto.com/apps/regina/' , md5(id_familia)) as 'INIVTACION' from familias;
+select 
+	case when tipo = 1 
+		then concat('FAM. ', apellidos) 
+        else  apellidos 
+	end as 'FAMILIA / INVITADO', 
+    concat('http://cezaryto.com/apps/regina/' , md5(id_familia)) as 'INVITACION' 
+from familias order by apellidos;
+    
 select concat('http://localhost:17944/' , md5(id_familia)) as 'INIVTACION' from familias;
 
 #Obtiene la Familia 

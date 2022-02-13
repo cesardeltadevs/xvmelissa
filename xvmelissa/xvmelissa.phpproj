@@ -80,9 +80,12 @@
     <Content Include="img\fondo8.png" />
     <Content Include="img\greca.png" />
     <Content Include="img\iglesia.png" />
+    <Content Include="img\instagram.png" />
+    <Content Include="img\liverpool.png" />
     <Content Include="img\R.jpg" />
     <Content Include="img\R.png" />
     <Content Include="img\salon.png" />
+    <Content Include="img\sears.png" />
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\bootstrap.bundle.min.js.map" />
     <Content Include="js\jquery-3.6.0.min.js" />
