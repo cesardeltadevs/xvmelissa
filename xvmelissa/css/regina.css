@@ -157,5 +157,6 @@ body {
 #seccion8 {
     background: url('../img/fondo8.png') no-repeat top center;
     background-size: cover;
+    margin-top: -5%;
 }
 
