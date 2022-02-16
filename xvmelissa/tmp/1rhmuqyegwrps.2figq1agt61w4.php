@@ -25,8 +25,10 @@
                 <img src="<?= ($ruta) ?>img/Aro_nombre.png" alt="Aro 01" class="img-fluid w-100" />
             </div>
             <div class="col-md-4"></div>
-            <br />            
-            <button onclick="InciarInvitacion();" class="btn btn-light"><strong>Ver Invitación</strong></button>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <a onclick="InciarInvitacion();" class="btn btn-dark ver"><strong>VER INVTACIÓN</strong></a>
         </div>
 
         <div id="invi-completa">
@@ -35,10 +37,11 @@
                 <div class="col-md-4">
                     <!--<h1 class="titulo text-center" id="nombre">Regina</h1>-->
                     <img src="<?= ($ruta) ?>img/Aro_nombre.png" alt="Aro 01" class="img-fluid w-100" />
+                    <p>&nbsp;</p>
                     <p class="text-center texto1 fecha">30.Abril.2022</p>
                 </div>
                 <div class="col-md-4"></div>
-                <br />            
+                <p>&nbsp;</p>            
             </div>
 
             <div id="seccion2">
