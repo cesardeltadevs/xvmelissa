@@ -69,5 +69,58 @@ namespace datos
 
 			exit(json_encode($respuesta));
 		}
+
+		private const FRASE = "REGINA2204";
+		public function ListaInvitados($f3) {
+			//Metodo para descargar la Lista de Invitados Confirmados
+			$pass = $f3->get('PARAMS.c');
+
+			if (is_null($pass) || empty($pass)) {
+				$f3->reroute($f3->get('ruta'));
+			}
+			else {
+				if ($pass == self::FRASE) {
+					$f3->set('SESSION.acceso', true);
+					$f3->reroute($f3->get('ruta') . 'lista/descargar');
+				}
+				else {
+					echo "<script>alert('Contrase\u00F1a Incorrecta');window.location.href = '" . $f3->get('ruta') . "';</script>";
+				}
+			}
+		}
+
+		public function DescargarLista ($f3) {
+			if ($f3->get('SESSION.acceso')) {
+				//Obtiene los datos de los asistentes
+				$baseObj = $this->conectar();
+				$asistentes = $baseObj->exec("select id_persona as 'ASISTENTE', f.apellidos as 'FAMILIA', nombre as 'INVITADO', case when confirmacion = 0 then 'NO' else 'SI' end as 'CONFIRMADO' from personas p inner join familias f on p.familia = f.id_familia order by apellidos, nombre;");
+				$resumen = $baseObj->exec("select count(id_persona) as 'TOTAL', (select count(id_persona) from personas where confirmacion = 1) as 'CONF', (select count(id_persona) from personas where confirmacion = 0) as 'FALTA' from personas;");
+				unset($baseObj);
+
+				//var_dump($resumen, $asistentes);
+				//exit;
+					
+				$f3->set('asistentes', $asistentes);
+				$f3->set('resumen', $resumen[0]);
+
+				echo \Template::instance()->render("Confirmados.html");
+			}
+			else {
+				$f3->clear($f3->get('SESSION'));				
+				if (ini_get("session.use_cookies")) {
+					$params = session_get_cookie_params();
+					setcookie(session_name(), '', time() - 42000,
+						$params["path"], $params["domain"],
+						$params["secure"], $params["httponly"]
+					);
+				}
+				session_destroy();
+			}
+		}
+
+		public function AccesoLista($f3) {
+			//Pide la contraseña para el acceso a la lista
+			echo "<script>var c = prompt('CONTRASE\u00D1A DE ACCESO');window.location.href = '" . $f3->get('ruta') . "lista/' + c;</script>";
+		}
 	}
 }

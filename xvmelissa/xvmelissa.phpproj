@@ -60,6 +60,7 @@
     <Content Include="config.ini" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="css\descarga.css" />
     <Content Include="css\regina.css" />
     <Content Include="fonts\Champagne_Limousines.ttf" />
     <Content Include="fonts\Honey_Florist.otf" />
@@ -86,6 +87,7 @@
     <Content Include="img\R.png" />
     <Content Include="img\salon.png" />
     <Content Include="img\sears.png" />
+    <Content Include="vistas\Previa.html" />
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\bootstrap.bundle.min.js.map" />
     <Content Include="js\jquery-3.6.0.min.js" />
@@ -93,6 +95,8 @@
     <Content Include="lib\CHANGELOG.md" />
     <Content Include="lib\code.css" />
     <Content Include="lib\COPYING" />
+    <Content Include="media\y2mate.com-The Greatest Showman.mp3" />
+    <Content Include="vistas\Confirmados.html" />
     <Content Include="vistas\Invitacion.html" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +113,7 @@
     <Folder Include="img\" />
     <Folder Include="fonts\" />
     <Folder Include="datos\" />
+    <Folder Include="media\" />
     <Folder Include="vistas\" />
   </ItemGroup>
 </Project>

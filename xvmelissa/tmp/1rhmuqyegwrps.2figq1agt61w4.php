@@ -12,42 +12,56 @@
 
     <script src="<?= ($ruta) ?>js/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="<?= ($ruta) ?>js/bootstrap.bundle.min.js" type="text/javascript"></script>    
+    <script>
+        
+    </script>
 </head>
 <body>
-    <div class="contaier-fluid">
-        <div class="row" id="seccion1">
+    <div class="contaier-fluid">       
+        <div class="row" id="previa">
             <div class="col-md-4"></div>
             <div class="col-md-4">
                 <!--<h1 class="titulo text-center" id="nombre">Regina</h1>-->
                 <img src="<?= ($ruta) ?>img/Aro_nombre.png" alt="Aro 01" class="img-fluid w-100" />
-                <p class="text-center texto1 fecha">30.Abril.2022</p>
             </div>
             <div class="col-md-4"></div>
-            <br />
+            <br />            
+            <button onclick="InciarInvitacion();" class="btn btn-light"><strong>Ver Invitación</strong></button>
         </div>
 
-        <div id="seccion2">
+        <div id="invi-completa">
+            <div class="row" id="seccion1">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <!--<h1 class="titulo text-center" id="nombre">Regina</h1>-->
+                    <img src="<?= ($ruta) ?>img/Aro_nombre.png" alt="Aro 01" class="img-fluid w-100" />
+                    <p class="text-center texto1 fecha">30.Abril.2022</p>
+                </div>
+                <div class="col-md-4"></div>
+                <br />            
+            </div>
+
+            <div id="seccion2">
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="titulo text-center texto1">Faltan...</h3>
                 </div>
             </div>
             <div class="row" id="contadores">
-                <div class="col-1"></div>
-                <div class="col-11">
-                    <div class="row">
-                        <div class="col-4 contador text-center">
-                            <span id="dias">00</span><br />días
-                        </div>
-                        <div class="col-4 contador text-center">
-                            <span id="horas">00</span><br />horas
-                        </div>
-                        <div class="col-4 contador text-center">
-                            <span id="minutos">00</span><br />minutos
-                        </div>
-                    </div>
+                <div class="col-3 contador text-center contador-dh">
+                    <span id="dias">00</span><br />días
                 </div>
+                <div class="col-3 contador text-center contador-dh">
+                    <span id="horas">00</span><br />horas
+                </div>
+                <div class="col-3 contador text-center contador-ms">
+                    <span id="minutos">00</span><br />minutos
+                </div>
+                <div class="col-3 contador text-center contador-ms">
+                    <span id="segundos">00</span><br />segundos
+                </div>                
             </div>
+            <br />
             <div class="row">
                 <div class="col-md-6">
                     <img src="<?= ($ruta) ?>img/R.png" alt="Regina" class="img-fluid w-100" />
@@ -175,12 +189,13 @@
                         <p>&nbsp;</p>
                         <?php if ($familia['tipo'] == '1'): ?>
                             
-                                <h4 class="text-center direccion">FAMILIA: <br /> <strong><?= ($familia['familia']) ?></strong></h4>                                
+                                <h4 class="text-center direccion">FAMILIA: <br /> <strong><?= ($familia['familia']) ?></strong></h4>
                             
                             <?php else: ?>
                                 <h4 class="text-center direccion">INVITADO ESPECIAL: <br /> <strong><?= ($familia['familia']) ?></strong></h4>
                             
-                        <?php endif; ?>
+                        <?php endif; ?>                        
+                        <p class="text-center direccion">(Evento sin Niños)</p>
                     </div>
                 </div>
                 <br />
@@ -264,6 +279,10 @@
                         <li>9:30 - Cena</li>
                     </ul>
                     <p>&nbsp;</p>
+                    <h3 class="text-center vestimenta">Código de Vestimenta</h3>
+                    <h3 class="text-center vestimenta"><strong>Etiqueta Rigurosa</strong></h3>
+                    <p>&nbsp;</p>
+
                     <h3 class="text-center sobresaliente nombres2">Mesa de Regalos</h3>
                     <p class="text-center texto-hashtag">El mejor regalo es que me acompañes, <br /> pero si deseas obsequiarme algo, <br /> te comparto algunas sugerencias</p>
 
@@ -276,7 +295,13 @@
                 </div>
             </div>
         </div>
+        </div>
+        
     </div>
+    <audio autoplay class="w-100" loop >
+        <source src="<?= ($ruta) ?>media/y2mate.com-The Greatest Showman.mp3" type="audio/mp3" />
+        <source src="<?= ($ruta) ?>media/y2mate.com-The Greatest Showman.ogg" type="audio/ogg" />
+    </audio>
 
     <script src="<?= ($ruta) ?>js/regina.js" type="text/javascript"></script>    
 </body>

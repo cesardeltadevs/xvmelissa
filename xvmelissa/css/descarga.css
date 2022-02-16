@@ -1,0 +1,11 @@
+﻿.confirmado {
+    background-color: lightpink;
+}
+
+.resumen {
+    font-size: 1.75em;
+}
+
+.sin-confirmar {
+    color: gray;
+}

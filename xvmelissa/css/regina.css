@@ -17,9 +17,21 @@ body {
 }
 
 .contador {
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: bolder;
     text-transform: uppercase;
+}
+
+.eshoy-eshoy {
+    color: red;
+} 
+
+.contador:first-child {
+    /*margin-right:-10%;*/
+}
+
+.contador-dh {
+    margin-right: -5%;
 }
 
 .cuadro-confirmar {
@@ -117,8 +129,14 @@ body {
     font-size: 4em;
 }
 
+.vestimenta {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 #contadores {
-    margin-top: -10%;
+    margin-top: -8%;
 }
 
 #nombre {
@@ -129,7 +147,7 @@ body {
     position: absolute;
 }
 
-#seccion1 {
+#seccion1, #previa {
     background-image: url('../img/fondo1.jpg');
 }
 

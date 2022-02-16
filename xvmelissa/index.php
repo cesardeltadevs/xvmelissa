@@ -24,5 +24,8 @@ $f3->route('GET /', function ($f3) {
 
 $f3->route('GET /@codigo', 'datos\Confirmaciones->Invitacion');
 $f3->route('POST /confirmar/@inv', 'datos\Confirmaciones->Confirmar');
+$f3->route('GET /lista', 'datos\Confirmaciones->AccesoLista');
+$f3->route('GET /lista/@c', 'datos\Confirmaciones->ListaInvitados');
+$f3->route('GET /lista/descargar', 'datos\Confirmaciones->DescargarLista');
 
 $f3->run();
